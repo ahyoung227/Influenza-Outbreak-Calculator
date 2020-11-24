@@ -1,0 +1,35 @@
+table, tr, th {
+  border: 1px solid black;
+  padding: 1em;
+}
+
+#explain {
+  height: 170px;
+  width: 200px;
+  background-color: #e0e0eb; 
+  padding: 0.5em;
+}
+
+.signal1 {
+  height: 25px;
+  width: 25px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.signal2 {
+  height: 25px;
+  width: 25px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.signal3 {
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
