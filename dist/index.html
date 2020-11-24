@@ -1,49 +1,51 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - INFLUENZA OUTBREAK CALCULATOR</title>
+  <title>INFLUENZA OUTBREAK CALCULATOR</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<div id="app">
 
-  <p>INFLUENZA OUTBREAK CALCULATOR</p>
-  <div id=explain>
-    <p>OT: Outbreak Treshold</p>
-    <p>TAC: Total Active Cases</p>
-    <span class=signal1></span>safe (TAC=0)
-    <br>
-    <span class=signal2></span>alert 
-    <br>
-    <span class=signal3></span>warning (OT>TAC)
-    <br>
-    <p>
-  </div>
- 
-  
-  <table>
-    <thead>
-   <tr>
-    <th>Community</th>
-    <th>Population</th>
-    <th>Total Active Cases</th>
-    <th>Activeness</th>
-    <th>Percent Infected</th>
-    <td v-for="(day, idx) in 30">day {{ day }}</td>
-   </tr>
-    </thead>
-    <tbody>
-   <tr is="simul" v-for="community in communities"
-     :comm="community"
-       ></tr>
+<body>
+  <!-- partial:index.partial.html -->
+  <div id="app">
+
+    <p>INFLUENZA OUTBREAK CALCULATOR</p>
+    <div id=explain>
+      <p>OT: Outbreak Treshold</p>
+      <p>TAC: Total Active Cases</p>
+      <span class=signal1></span>safe (TAC=0)
+      <br>
+      <span class=signal2></span>alert
+      <br>
+      <span class=signal3></span>warning (OT>TAC)
+      <br>
+      <p>
+    </div>
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>Community</th>
+          <th>Population</th>
+          <th>Total Active Cases</th>
+          <th>Activeness</th>
+          <th>Percent Infected</th>
+          <td v-for="(day, idx) in 30">day {{ day }}</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr is="simul" v-for="community in communities" :comm="community"></tr>
       </tbody>
-  </table>
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script><script  src="./script.js"></script>
+    </table>
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script>
+  <script src="./script.js"></script>
 
 </body>
+
 </html>
