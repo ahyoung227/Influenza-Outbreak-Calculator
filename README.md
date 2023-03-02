@@ -4,18 +4,31 @@
 
 ## About The Project
 
-<p> In this project, I created a simple influenza calculator. There are three stage for the level of risk - safe, alert and warning. According to <a href="https://www.cdc.gov/quarantine/cruise/reporting-deaths-illness/how-calculate-influenza-influenza-like-illness-case-outbreak-threshold-cumulative-reports.html"><span>Influenza outbreak equation from CDC report</span></a>, by entering total population, total active cases and activeness, you can predict the level of influenza outbreak risk.</p>
-<br>
+In mid-2020, many countries assessed and reported the risk level of COVID-19 infection to educate their citizens. 
+It was done in an effort to increase awareness and encourage preventive measures to mitigate the spread of the virus.
+In this project, I created a simple influenza calculator to predict the risk of level of Corona Virus. 
+There are three stage for the level of risk - safe, alert and warning.
 <img src="/calculator.gif">
+
+In the early stage in pandemic, there were not much information regarding key metrics.
+Hence, I used this equation ([Influenza outbreak equation from CDC report](https://www.cdc.gov/quarantine/cruise/reporting-deaths-illness/how-calculate-influenza-influenza-like-illness-case-outbreak-threshold-cumulative-reports.html))
+to determine the threshold for each level.
+```
+  methods: {
+    threshold(day) {
+      return Math.floor(1.38*(this.comm.population*day)/1000);
+    }
+  }
+```
+
+By entering total population, total active cases and activeness, you can predict the level of influenza outbreak risk by its color - safe, alert and warning.
+
+
 
 ### Built With
 
-- [HTML]
-- [CSS]
-- [JAVASCRIPT]
-- [VUE]
+This calculator is built with Javascript, Vuejs.
 
-<!-- LICENSE -->
 
 ## License
 
